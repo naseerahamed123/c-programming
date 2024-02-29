@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+void copyArray(int *source, int *destination, int size) {
+    // Copy elements from source to destination using pointers
+    for (int i = 0; i < size; i++) {
+        *(destination + i) = *(source + i);
+    }
+}
+
+int main() {
+    int sourceArray[] = {1, 2, 3, 4, 5};
+    int destinationArray[5]; // Create an array to store the copied contents
+    int size = sizeof(sourceArray) / sizeof(sourceArray[0]);
+
+    // Copy contents of sourceArray to destinationArray
+    copyArray(sourceArray, destinationArray, size);
+
+    // Print the contents of destinationArray to verify
+    printf("Contents of destinationArray after copying:\n");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", destinationArray[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
