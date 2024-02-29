@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main(){
+    int sum=0,n,i;
+    printf("enter the range:");
+    scanf("%d",&n);
+
+    for(i=1;i<=n;i++){
+        if(i%5==0){
+            sum+=i;
+        }
+    }
+printf("the the sum of numbers divisible by five upto %d is : %d",n,sum);
+}
