@@ -1,0 +1,13 @@
+#include<stdio.h>
+
+main()
+{    int m,n=1,a,e;
+     printf("enter the multiple of the table");
+     scanf("%d",&m);
+     printf("enter the end value for multiple table");
+     scanf("%d",&e);
+     for(n=1;n<=e;n++){
+	 a=m*n;
+	 printf("\n%d*%d=%d",m,n,a);
+	   }
+}
