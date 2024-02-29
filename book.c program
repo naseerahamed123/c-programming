@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+#define MAX_BOOKS 3 
+
+struct Book {
+    char title[100];
+    char author[100];
+    float price;
+};
+
+int main() {
+    struct Book books[MAX_BOOKS] = {
+        {"Book 1", "Author 1", 10.50},
+        {"Book 2", "Author 2", 15.75},
+        {"Book 3", "Author 3", 20.00}
+    };
+
+    printf("Book Details:\n");
+    printf("===========================================\n");
+    printf("%-30s%-30s%-10s\n", "Title", "Author", "Price");
+    printf("===========================================\n");
+    for (int i = 0; i < MAX_BOOKS; i++) {
+        printf("%-30s%-30s$%-10.2f\n", books[i].title, books[i].author, books[i].price);
+    }
+    printf("===========================================\n");
+
+    return 0;
+}
